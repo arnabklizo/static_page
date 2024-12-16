@@ -1,0 +1,633 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", serif;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --white: #fff;
+    --black: #000;
+    --color2: #91a3ed;
+}
+
+
+
+/* for scroll bar scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 50px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--black);
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--color2);
+    border-radius: 6px;
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+    background-image: radial-gradient(var(--black), var(--color2));
+}
+
+
+body {
+    background-color: var(--black);
+    color: var(--white);
+}
+
+a {
+    text-decoration: none;
+}
+
+
+
+/* navbar  */
+header {
+    position: fixed;
+    z-index: 9;
+    width: 100%;
+    top: 0;
+}
+
+.navbarBtn {
+    font-size: 28px;
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    padding: 0;
+
+    display: none;
+    visibility: hidden;
+}
+
+.navBrand a {
+    height: 43px;
+    width: 43px;
+    display: block;
+}
+
+.navBrand a img {
+    width: 100%;
+    height: 100%;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+}
+
+.navbar ul a {
+    color: var(--white);
+    font-size: 16px;
+    font-weight: 500;
+    padding: 5px 10px;
+    margin: 0 20px;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.active,
+.navbar ul a:hover {
+    text-decoration: underline 4px var(--color2) !important;
+    text-underline-position: under !important;
+    transition: all 0.3s !important;
+}
+
+.btnSignUp {
+    padding: 5px 15px;
+    border: 2px solid var(--white);
+    font-size: 16px;
+    background-color: transparent;
+    border-radius: 6px;
+    color: var(--white);
+}
+
+.btnSignUp:hover {
+    background-image: linear-gradient(var(--color2), var(--color2));
+    color: var(--black);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 9;
+}
+
+.sectionNewWorld,
+.sectionServices,
+.bannersection,
+nav {
+    position: relative;
+}
+
+
+.newWorld,
+.services,
+.banner,
+nav {
+    width: 1500px;
+    margin: auto;
+    padding: 20px 0;
+}
+
+nav {
+    padding-left: 10px;
+    padding-right: 10px;
+    backdrop-filter: blur(30px);
+    border-radius: 10px;
+    z-index: 4;
+}
+
+.sectionNewWorld,
+.sectionNewWorld,
+.sectionServices {
+    padding-top: 85px;
+}
+
+/* banner section  */
+.bannersection {
+    padding-top: 80px;
+}
+
+.bannHead span,
+.bannHead {
+    font-size: 48px;
+    font-weight: 700;
+}
+
+.bannHead span {
+    color: var(--color2);
+}
+
+.banner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.boxbannerLeft {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    padding: 30px 100px;
+    position: relative;
+    z-index: 1;
+}
+
+.boxbannerLeft p {
+    padding: 20px 0;
+}
+
+.bannerImg {
+    position: relative;
+}
+
+.bannerImg img {
+    margin: auto;
+}
+
+.eclipse {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.eclipse1 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100px;
+}
+
+.eclipse2 {
+    position: absolute;
+    left: 0;
+    bottom: 160px;
+    width: 80px;
+}
+
+.eclipse3 {
+    position: absolute;
+    left: -55px;
+    top: 150px;
+    width: 107px;
+    rotate: 135deg;
+    filter: brightness(1.5);
+
+    background-image: radial-gradient(#1fc3e78a, #1f34e7a1 30%, transparent 56%);
+}
+
+
+.ec1 {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 0;
+}
+
+.imgback1 {
+    position: absolute;
+    left: 0;
+    top: -100px;
+    z-index: 0;
+}
+
+.boxbannerRight {
+    position: relative;
+    z-index: 2;
+}
+
+
+
+/* services  */
+.boxservices {
+    width: 1034px;
+    padding: 14px 55px;
+    backdrop-filter: blur(30px);
+    background-color: #3e3c3c8f;
+    margin: auto;
+    border-radius: 20px;
+
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.serviceCard {
+    width: 22%;
+    backdrop-filter: blur(30px);
+    background-color: #3e3c3c8f;
+    border-radius: 20px;
+    padding: 20px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.serviceCard div {
+    font-size: 18px;
+    text-align: center;
+}
+
+.serviceCard img {
+    margin: 20px;
+}
+
+.imgback2 {
+    z-index: 0;
+    position: absolute;
+    top: -300px;
+    left: 0px;
+}
+
+footer,
+.services {
+    position: relative;
+    z-index: 1;
+}
+
+
+/* my world  */
+
+
+.newWorld {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.leftworld {
+    padding: 90px 0;
+    text-align: center;
+}
+
+.imgback3 {
+    position: absolute;
+    top: -400px;
+    right: 0;
+}
+
+.newWorld {
+    position: relative;
+    z-index: 2;
+}
+
+/* touch section  */
+
+.boxTouch {
+    width: 888px;
+    height: 370px;
+    border-radius: 40px;
+
+    backdrop-filter: blur(30px);
+    background-color: #3e3c3c8f;
+    margin: 60px auto;
+    position: relative;
+    display: flex;
+    z-index: 4;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.boxTouch .bannHead {
+    text-align: center;
+}
+
+.boxTouch p {
+    width: 468px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 18px;
+}
+
+.boxTouch .btnSignUp {
+    margin: 0 auto;
+}
+
+
+
+/* footer  */
+.footerbox {
+    text-align: center;
+    padding-bottom: 20px;
+    font-size: 20px;
+}
+
+.imgback4 {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 0;
+}
+
+
+@media(max-width:1599px) {
+
+    .newWorld,
+    .services,
+    .banner,
+    nav {
+        width: 1350px;
+    }
+}
+
+@media(max-width:1399px) {
+
+    .newWorld,
+    .services,
+    .banner,
+    nav {
+        width: 1150px;
+    }
+
+    .bannerIamageRobo {
+        width: 475px;
+    }
+
+    .bannHead span,
+    .bannHead {
+        font-size: 35px;
+    }
+
+    .boxTouch {
+        height: 300px;
+    }
+}
+
+@media(max-width:1199px) {
+
+    .newWorld,
+    .services,
+    .banner,
+    nav {
+        width: 950px;
+    }
+
+    .serviceCard {
+        width: 230px;
+    }
+
+    .boxservices {
+        width: 600px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .boxbannerLeft {
+        padding: 30px;
+    }
+
+    .leftworld img {
+        width: 400px;
+    }
+
+    .boxTouch {
+        width: 600px;
+    }
+}
+
+@media(max-width:991px) {
+
+    .newWorld,
+    .services,
+    .banner,
+    nav {
+        width: 700px;
+    }
+
+    .banner {
+        grid-template-columns: 1fr;
+    }
+
+    .boxbannerLeft,
+    .bannHead {
+        text-align: center;
+    }
+
+    .btnSignUp {
+        margin: auto;
+    }
+
+    .boxbannerLeft {
+        align-items: center;
+    }
+
+    .bannerImg {
+        display: flex;
+        justify-content: center;
+    }
+
+    .navbarBtn {
+        display: block;
+        visibility: visible;
+    }
+
+
+    .navbar ul li {
+        height: 29px;
+        text-align: center;
+    }
+
+
+    .navbar ul {
+        flex-direction: column;
+        width: 100%;
+        gap: 5px;
+        top: -600px;
+        height: auto;
+        position: absolute;
+        transition: all 0.3s;
+        padding-bottom: 45px;
+        padding-top: 10px;
+    }
+
+    nav {
+        padding: 20px 10px;
+        transition: all 0.3s;
+    }
+
+    .navActiveBar {
+        padding-bottom: 200px;
+        transition: all 0.3s;
+    }
+
+    .navbar .btnSignUp {
+        position: absolute;
+        margin: auto;
+        width: 20%;
+        text-align: center;
+        left: 40%;
+        top: -880px;
+        transition: all 0.3s;
+    }
+
+
+    .navbar .activeNavList {
+        top: 50px;
+        transition: all 0.3s;
+        z-index: 7;
+    }
+
+    .navbar .activeNav {
+        top: 190px;
+        transition: all 0.3s;
+        z-index: 7;
+    }
+
+    /* .newWorld,
+    .services,
+    .banner,
+    nav {
+        width: 500px;
+    }
+
+    .imgback4,
+    .imgback3,
+    .ec1,
+    .imgback2 {
+        max-width: 500px;
+    } */
+
+    .newWorld {
+        grid-template-columns: 1fr;
+    }
+
+    .imgback4,
+    .imgback3,
+    .ec1,
+    .imgback2 {
+        max-width: 400px;
+    }
+}
+
+@media(max-width:767px) {
+
+    .boxTouch,
+    .newWorld,
+    .services,
+    .banner,
+    nav {
+        width: 500px;
+    }
+
+    .eclipse {
+        width: 200px;
+    }
+
+    .boxservices {
+        width: 350px;
+    }
+}
+
+@media(max-width:575px) {
+
+    .boxTouch p,
+    .boxTouch,
+    .newWorld,
+    .services,
+    .banner,
+    nav {
+        width: auto;
+    }
+
+    .bannerIamageRobo {
+        width: 100%;
+    }
+
+    .imgback4,
+    .imgback3,
+    .ec1,
+    .imgback2,
+    .leftworld img,
+    .imgback1 {
+        width: 300px;
+    }
+
+    .boxservices {
+        width: 300px;
+        padding: 10px;
+    }
+
+    nav {
+        padding: 20px 10px;
+    }
+
+    .navbar .btnSignUp {
+        width: 30%;
+        left: 35%;
+    }
+
+    .eclipse {
+        width: 130px;
+    }
+
+    .bannHead span,
+    .bannHead {
+        font-size: 25px;
+    }
+
+    .eclipse2 {
+        bottom: 0;
+    }
+
+    .boxbannerLeft {
+        padding: 30px 10px;
+    }
+
+    .boxTouch {
+        height: 250px;
+        padding: 0 10px;
+        margin: 60px 10px;
+    }
+}
